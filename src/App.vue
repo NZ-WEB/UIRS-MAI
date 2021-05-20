@@ -1,74 +1,41 @@
 <template>
-  <v-app>
-    <v-app-bar
-        color="deep-purple"
-        dark
-        class="header"
-    >
-      <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
-
-      <v-toolbar-title class="main-title">Teor Mekh System</v-toolbar-title>
-    </v-app-bar>
-
-    <v-navigation-drawer
-        v-model="drawer"
-        absolute
-        temporary
-    >
-      <v-list
-          nav
-          dense
+  <div id="app">
+    <div id="nav">
+      <router-link to="/system">System</router-link>
+      | <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </div>
+    <router-view/>
+    <v-footer class="mt-5" >
+      <v-col
+          class="text-center"
+          cols="12"
       >
-        <v-list-item-group
-            v-model="group"
-            active-class="deep-purple--text text--accent-4"
-        >
-          <v-list-item>
-            <v-list-item-icon>
-              <v-icon>mdi-home</v-icon>
-            </v-list-item-icon>
-            <v-list-item-title>Home</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item>
-            <v-list-item-icon>
-              <v-icon>mdi-account</v-icon>
-            </v-list-item-icon>
-            <v-list-item-title>Account</v-list-item-title>
-          </v-list-item>
-        </v-list-item-group>
-      </v-list>
-    </v-navigation-drawer>
-    <v-main>
-      <HelloWorld/>
-    </v-main>
-  </v-app>
+        {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+      </v-col>
+    </v-footer>
+  </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld';
-
-export default {
-  name: 'App',
-
-  components: {
-    HelloWorld,
-  },
-
-  data: () => ({
-    drawer: false,
-    group: null,
-  }),
-};
-</script>
-
 <style lang="scss">
-.main-title {
-  text-transform: uppercase;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
 }
 
-.header {
-  max-height: 80px;
-}
+#nav {
+  padding: 30px;
 
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #3F51B5;
+    }
+  }
+}
 </style>

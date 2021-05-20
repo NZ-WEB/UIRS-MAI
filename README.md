@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # uirs.vue
 
 ## Project setup
@@ -22,3 +23,7 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+=======
+# TM-system
+TM-system
+>>>>>>> 5e921ab (Initial commit)

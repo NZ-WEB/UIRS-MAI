@@ -11,7 +11,7 @@
           class="text-center"
           cols="12"
       >
-        {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+        {{ new Date().getFullYear() }} — <span>M30-204C-19</span>
       </v-col>
     </v-footer>
   </div>

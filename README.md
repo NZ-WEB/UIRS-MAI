@@ -1,5 +1,7 @@
 # uirs.vue
 
+#App-link: http://77.223.98.163/
+
 ## Project setup
 ```
 yarn install
